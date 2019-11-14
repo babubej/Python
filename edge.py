@@ -56,7 +56,9 @@ def DataParsing(rawdata,slave_id):
             #get each item in one line
             first = words[0].split(',')
             date = first[0] 
+            fabno = first[1]
             words[0]= words[0].replace(date+',','')
+            words[0]= words[0].replace(fabno+',','')
             result =[]
             for i in words: 
                 split_data = i.split(',')
@@ -98,7 +100,9 @@ def DataParsingwithload(Data,slave_id,load_slaveid,load_pos):
             #get each item in one line
             first = words[0].split(',')
             date = first[0] 
+            fabno = first[1]
             words[0]= words[0].replace(date+',','')
+            words[0]= words[0].replace(fabno+',','')
             result =[]
             for i in words: 
                 split_data = i.split(',')
